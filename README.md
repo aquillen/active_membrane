@@ -9,7 +9,7 @@ $$ f(p) = \frac{A}{1 + p/p_*} $$
 
 Here ${\bf u}, {\bf p} \in {\mathbb R}^2$ and ${\bf u}({\bf x}, t)$, ${\bf p}({\bf x},t)$ with ${\bf x} \in \Omega$ and $\Omega$ is a two-dimensional domain.   The real parameters $A, \pi_k, p_* >0$. 
 
-The system represents an active membrane.  The system exhibits two counterrotating limit cycles. 
+The system represents an active membrane.  The system exhibits two limit cycles.  One rotates in the opposite direction of the other.  
 
 ![](https://github.com/aquillen/active_membrane/blob/main/bio_v006_vel.gif)
 
