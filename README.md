@@ -15,4 +15,5 @@ The system represents an active membrane.  The system exhibits two limit cycles.
 
 The notebooks use NGsolve and subroutines in bio_mem_helpers.py. 
 
-The notebooks if they start with Circ are on circular domains. 
++ Circ_v002 Circular domain Neumann Boundary
++ Circ_v003 Circular domain Dirichlet Boundary 
