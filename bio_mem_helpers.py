@@ -417,7 +417,7 @@ def pts_tri(mesh):
 #  qkeyloc: control quiver key locations
 def displot(gfu,gfp,mesh,coarsemesh,time_label,ofile,plt_dotprod=False,plt_crossprod=False,vecscale_u=None,\
             vlength_set_u = None, vecscale_p = None,vlength_set_p = None,yratio=1,\
-            cbar_label='',cbar_shrink=0.7,parmlabel='',qkeyloc=None):
+            cbar_label='',cbar_shrink=0.7,parmlabel='',qkeyloc=None,fac=0.999):
     # plot displacement vectors and vorticity
     plt_pvectors = True  # plot pol vectors
     plt_uvectors = True  # plot displacement vectors
@@ -490,7 +490,7 @@ def displot(gfu,gfp,mesh,coarsemesh,time_label,ofile,plt_dotprod=False,plt_cross
         fig.colorbar(field0,shrink=cbar_shrink,label=cbar_label,pad=0.02,\
                 ticks=[-cmax, 0, cmax], format=mticker.FixedFormatter(['-3','0', '3']))
 
-    fac = 0.999  # so that coarse mesh does not screw up by giving zeros on all vectors
+    #fac = 0.999  # so that coarse mesh does not screw up by giving zeros on all vectors
     if (plt_uvectors==True):  # plot u vectors
         
         ux_vals = np.zeros(coarsemesh.nv)
@@ -708,7 +708,7 @@ def spatial_corr(gfu,mesh,x0,y0,dr):
 #  qkeyloc: if you need to adjust quiverkey location
 def vorplot(gfu_vel,mesh,coarsemesh,dt,time_label,ofile,vecscale=None,\
             vlength_set = None,parmlabel='',vmaxx=None,cbar_shrink=0.8,divdt=True,\
-            cbar_label='',figy=1.0,qkeyloc=None):
+            cbar_label='',figy=1.0,qkeyloc=None,fac=0.999):
 
     plt_vorticity = True  # plot vorticity
     plt_uvectors = True  # plot velocity vectors
@@ -760,7 +760,8 @@ def vorplot(gfu_vel,mesh,coarsemesh,dt,time_label,ofile,vecscale=None,\
     if (plt_uvectors==True):
         utx_vals = np.zeros(coarsemesh.nv)
         uty_vals = np.zeros(coarsemesh.nv)
-        fac = 0.999  # make sure coarse mesh points are in domain
+        #fac = 0.999  # make sure coarse mesh points are in its own domain
+        # this only works in convex domains centered at the origin for the coarsemesh
         for k in range(coarsemesh.nv):
             utx_vals[k] = utx(coarsemesh(fac*xv_coarse[k],fac*yv_coarse[k]))
             uty_vals[k] = uty(coarsemesh(fac*xv_coarse[k],fac*yv_coarse[k]))
