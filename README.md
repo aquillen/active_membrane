@@ -13,7 +13,17 @@ The system represents an active membrane.  The system exhibits two limit cycles.
 
 ![](https://github.com/aquillen/active_membrane/blob/main/bio_v006_vel.gif)
 
-The notebooks use NGsolve and subroutines in bio_mem_helpers.py. 
+The notebooks use NGsolve and subroutines in the file bio_mem_helpers.py 
 
-+ Circ_v002 Circular domain Neumann Boundary
-+ Circ_v003 Circular domain Dirichlet Boundary 
+Notebooks:
+
++ Circ_v002.ipynb Circular domain Neumann Boundary (denoted Circ-N in manuscript)
++ Circ_v003.ipynb Circular domain Dirichlet Boundary  (denoted Circ-D in manuscript)
++ Rec_v002.ipynb Rectangular domain, mixed boundary condition (denoted Rec-Small in manuscript)
++ Rec_v003.ipynb Rectangular domain, mixed boundary condition (denoted Rec-Mid in manuscript)
++ Ann_v003.ipynb Annular domain, mixed boundary condition (denoted Ann in manuscript)
+
++ Dispersions.ipynb Plots roots of dispersion relations and bifurcation plot
+
+Subroutines:
++ bio_mem_helpers.py 
