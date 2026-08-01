@@ -28,4 +28,6 @@ Notebooks:
 + Dispersions.ipynb Plots roots of dispersion relations and bifurcation plot
 
 Subroutines:
-+ bio_mem_helpers.py 
++ bio_mem_helpers.py
+
+The integration uses Finite element package NGsolve. The integrator is Crank-Nicolson for the elastic term and a first order correction afterwards to take into account the non-linear terms in the PDE system. 
