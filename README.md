@@ -11,7 +11,7 @@ Here ${\bf u}, {\bf p} \in {\mathbb R}^2$ and ${\bf u}({\bf x}, t)$, ${\bf p}({\
 
 The system represents an active membrane.  The system exhibits two limit cycles.  One rotates in the opposite direction of the other.  
 
-![](https://github.com/aquillen/active_membrane/video5_short.mp4)
+![](https://raw.githubusercontent.com/aquillen/active_membrane/main/video5_short.mp4)
 
 The notebooks use NGsolve and subroutines in the file bio_mem_helpers.py 
 
