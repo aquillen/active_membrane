@@ -15,7 +15,7 @@ The system represents an active membrane.  The system exhibits two limit cycles.
 
 ![For a video](https://raw.githubusercontent.com/aquillen/active_membrane/main/video5_short.mp4)
 
-The notebooks use NGsolve and subroutines in the file bio_mem_helpers.py 
+The notebooks use finite element package NGsolve and subroutines in the file bio_mem_helpers.py 
 
 Notebooks:
 
@@ -30,4 +30,4 @@ Notebooks:
 Subroutines:
 + bio_mem_helpers.py
 
-The integration uses Finite element package NGsolve. The integrator is Crank-Nicolson for the elastic term and a first order correction afterwards to take into account the non-linear terms in the PDE system. 
+The integrator is Crank-Nicolson for the elastic term and a first order correction afterwards to take into account the non-linear terms in the PDE system. 
